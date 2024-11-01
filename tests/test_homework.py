@@ -1,4 +1,4 @@
-"""GitHub Classroom autograding script."""
+"""Autograding script."""
 
 # pylint: disable=broad-exception-raised
 
@@ -7,7 +7,7 @@ import os
 import homework.word_count as wc
 
 
-def test_homework():
+def test_01():
     """Test Word Count"""
 
     wc.run_job("input", "output")

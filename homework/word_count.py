@@ -27,7 +27,6 @@ def load_input(input_directory):
     """Funcion load_input"""
 
 
-
 #
 # Escriba la función line_preprocessing que recibe una lista de tuplas de la
 # función anterior y retorna una lista de tuplas (clave, valor). Esta función
@@ -78,14 +77,12 @@ def reducer(sequence):
     """Reducer"""
 
 
-
 #
 # Escriba la función create_ouptput_directory que recibe un nombre de
 # directorio y lo crea. Si el directorio existe, lo borra
 #
 def create_ouptput_directory(output_directory):
     """Create Output Directory"""
-
 
 
 #
@@ -100,7 +97,6 @@ def save_output(output_directory, sequence):
     """Save Output"""
 
 
-
 #
 # La siguiente función crea un archivo llamado _SUCCESS en el directorio
 # entregado como parámetro.
@@ -109,20 +105,11 @@ def create_marker(output_directory):
     """Create Marker"""
 
 
-
 #
 # Escriba la función job, la cual orquesta las funciones anteriores.
 #
 def run_job(input_directory, output_directory):
     """Job"""
-    sequence = load_input(input_directory)
-    sequence = line_preprocessing(sequence)
-    sequence = mapper(sequence)
-    sequence = shuffle_and_sort(sequence)
-    sequence = reducer(sequence)
-    create_ouptput_directory(output_directory)
-    save_output(output_directory, sequence)
-    create_marker(output_directory)
 
 
 if __name__ == "__main__":
