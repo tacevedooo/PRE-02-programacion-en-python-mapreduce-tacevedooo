@@ -5,7 +5,20 @@
 import fileinput
 import glob
 import os.path
+import time
 from itertools import groupby
+
+
+#
+# Escriba la funcion que  genere n copias de los archivos de texto en la
+# carpeta files/raw en la carpeta files/input. El nombre de los archivos
+# generados debe ser el mismo que el de los archivos originales, pero con
+# un sufijo que indique el número de copia. Por ejemplo, si el archivo
+# original se llama text0.txt, el archivo generado se llamará text0_1.txt,
+# text0_2.txt, etc.
+#
+def copy_raw_files_to_input_folder(n):
+    """Funcion copy_files"""
 
 
 #
@@ -113,7 +126,15 @@ def run_job(input_directory, output_directory):
 
 
 if __name__ == "__main__":
+
+    copy_raw_files_to_input_folder(n=1000)
+
+    start_time = time.time()
+
     run_job(
-        "input",
-        "output",
+        "files/input",
+        "files/output",
     )
+
+    end_time = time.time()
+    print(f"Tiempo de ejecución: {end_time - start_time:.2f} segundos")
