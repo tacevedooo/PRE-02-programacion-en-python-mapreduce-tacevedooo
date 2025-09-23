@@ -55,7 +55,7 @@ def shuffle_and_sort(sequence):
     for key, group in groupby(sorted_seq, key=lambda x: x[0]):
         yield (key, list(pluck(1, group)))
 
-
+#
 def compute_sum_by_group(group):
     """ Compute sum for group of values"""
     key, values = group
